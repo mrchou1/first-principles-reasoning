@@ -1,5 +1,7 @@
 # Experiment Canvas
 
+> **Note**: This template is now fully integrated into SKILL.md (v2.0+). This file is kept as a standalone reference.
+
 Designed to test the riskiest assumption of a new concept with minimal resources.
 
 | Field | Description |

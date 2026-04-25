@@ -1,5 +1,7 @@
 # Assumptions Inventory Template
 
+> **Note**: This template is now fully integrated into SKILL.md (v2.0+). This file is kept as a standalone reference.
+
 Use this table to list and evaluate every assumption behind the current solution or conventional approach.
 
 | # | Assumption | Source (Tradition / Regulation / Physical Law / Other) | Verdict (Keep / Destroy) | If Destroyed, What Opens Up? |

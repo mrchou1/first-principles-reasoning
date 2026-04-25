@@ -1,85 +1,82 @@
 # First Principles Reasoning Skill
 
-A structured reasoning skill for [Claude Code](https://claude.ai/code) that enables deep first-principles analysis. It guides the model through a rigorous 5‑phase protocol to challenge assumptions, decompose problems into irreducible elements, and reconstruct novel solutions from fundamental truths.
+A structured reasoning skill for [Claude Code](https://claude.ai/code) that guides deep first-principles analysis through an interactive, multi-phase protocol.
+
+**Version 2.0** — Complete rewrite: single self-contained file, interactive checkpoints, depth modes, anti-pattern warnings, and richer reference materials.
+
+---
+
+## What's New in v2
+
+- **Self-contained SKILL.md**: All templates, references, and tools are inlined — no external resource loading needed
+- **Interactive checkpoints**: Pause after each phase for user review, instead of dumping everything at once
+- **Depth modes**: Quick (2 phases), Standard (4 phases), Full (5 phases) — matched to problem complexity
+- **Anti-pattern warnings**: Explicit guidance on when NOT to use first-principles thinking and common failure modes
+- **Cleaned metaprinciples**: Separated into Immutable Laws / Empirical Patterns / Heuristics with honest caveats
+- **Deepened case studies**: Timelines, alternatives considered, near-death experiences, and specific numbers
+- **Priority ranking**: ICE framework for ranking reconstructed concepts
+- **Curated biases**: Top 10 biases with specific first-principles misuse scenarios
+- **Consolidated stress tests**: 6 genuinely different test dimensions instead of 5 variations of "change the environment"
 
 ---
 
 ## Installation
 
-1. Copy the entire `first-principles-reasoning/` folder into your Claude Code skills directory:
+1. Copy the `first-principles-reasoning/` folder into your Claude Code skills directory:
    - **Personal**: `~/.claude/skills/first-principles-reasoning/`
    - **Project**: `your-project/.claude/skills/first-principles-reasoning/`
-2. Restart Claude Code (or open a new session). The skill will be automatically detected.
+2. Restart Claude Code (or open a new session). The skill will be auto-detected.
 
 ---
 
 ## Quick Start
 
-Once installed, you can activate the skill by saying things like:
+Activate the skill by saying:
 
 - *"Think about this from first principles"*
 - *"Break down the cost of X to its fundamental materials"*
 - *"Why is this done this way? Rethink it from scratch."*
-- *"Do a radical redesign of our onboarding flow using first principles."*
-
-You can also reference it explicitly: *"Use the first-principles-reasoning skill."*
+- *"Use the first-principles-reasoning skill."*
 
 ---
 
-## What's Inside
+## The 5-Phase Protocol
 
-The skill includes a carefully designed `SKILL.md` with a full reasoning protocol, plus a rich set of supporting resources:
+| Phase | Name | What Happens | Checkpoint |
+|---|---|---|---|
+| 1 | Define Prime Objective | Strip away existing solutions, articulate the purest functional goal | Confirm objective with user |
+| 2 | Excavate & Destroy Assumptions | List assumptions, classify sources, destroy non-essential ones | Review verdicts with user |
+| 3 | Decompose to Fundamentals | MECE breakdown to irreducible elements | Validate completeness with user |
+| 4 | Reconstruct from Ground Truths | Generate novel concepts via morphological matrix | Select concepts with user |
+| 5 | Falsify & Iterate | Design minimal experiments, rank with ICE framework | Present final recommendation |
+
+Each checkpoint pauses for user input — no more one-shot output dumps.
+
+---
+
+## When to Use / Not Use
+
+**Use it for**: Radical innovation, cost reduction, creative blocks, "impossible" problems.
+
+**Don't use it for**: Routine problems, time-critical decisions, compliance/safety issues, problems requiring domain expertise you lack.
+
+---
+
+## Project Structure
+
+```
 first-principles-reasoning/
-├── SKILL.md # Main skill definition & protocol
-└── resources/
-├── templates/
-│ ├── assumptions_inventory.md # Template: Assumptions table
-│ ├── mece_decomposition.md # Template: MECE tree for problem breakdown
-│ ├── concept_morphological_matrix.md # Template: Morphological matrix for idea generation
-│ └── experiment_canvas.md # Template: Lean experiment design
-├── references/
-│ ├── cognitive_biases_cheatsheet.md # Top 20 biases that distort reasoning
-│ ├── first_principles_case_studies.md # Classic examples (SpaceX, iPhone, Amazon Prime, etc.)
-│ ├── metaprinciples.md # Universal principles across physics, economics, logic
-│ └── logical_fallacies_guide.md # Common fallacies and how to avoid them
-└── tools/
-└── assumption_stress_test_prompt.md # Deep attack on assumptions
+├── SKILL.md                          # Self-contained skill (all content inlined)
+├── README.md                         # This file
+├── README.zh.md                      # Chinese README
+├── .gitignore
+└── resources/                        # Supplementary references (optional reading)
+    ├── templates/                    # Standalone copies of templates
+    ├── references/                   # Standalone copies of reference materials
+    └── tools/                        # Standalone copies of stress test tools
+```
 
-
----
-
-## The 5‑Phase Protocol
-
-When invoked, the skill walks through this loop:
-
-1. **Define the Prime Objective** – strip away existing solutions and articulate the purest functional goal.
-2. **Excavate & Destroy Assumptions** – list at least 10 assumptions, determine which are true constraints and which are merely tradition, then destroy the latter.
-3. **Decompose to Fundamental Elements** – use MECE decomposition to find irreducible components (materials, energy, unchanging needs).
-4. **Reconstruct from Ground Truths** – generate radically different concept combinations using a morphological matrix.
-5. **Falsify & Iterate** – design minimal experiments to test the riskiest assumption, then loop back if needed.
-
-Every phase is supported by templates and reference sheets that Claude Code can load on-demand, keeping the context lean while providing deep support.
-
----
-
-## Usage Tips
-
-- **Big, expensive problems** benefit most. Don't use it for trivial decisions.
-- **Trust the process.** The protocol may feel slow at first, but it's designed to break mental shortcuts.
-- **Combine with domain knowledge.** The skill provides the *how to think*; you (or other skills) provide the *what to think about*.
-- **Iterate.** The skill encourages cycling through the loop multiple times as new information emerges.
-
----
-
-## Contributing
-
-This skill is meant to be improved over time. If you find better templates, more relevant metaprinciples, or sharper bias descriptions, feel free to edit the resource files. Keep the structure intact so that the main `SKILL.md` can still reference them.
-
----
-
-## License
-
-This project is provided under the MIT License. Use it, modify it, share it freely.
+The `resources/` directory contains the same content as SKILL.md for convenient standalone reading, but is **not required** for the skill to function.
 
 ---
 
@@ -89,4 +86,6 @@ This project is provided under the MIT License. Use it, modify it, share it free
 - **Email:** 3965537@qq.com
 - **GitHub:** [mrchou1/first-principles-reasoning](https://github.com/mrchou1/first-principles-reasoning)
 
----
+## License
+
+MIT License. Use, modify, and share freely.

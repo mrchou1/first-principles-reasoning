@@ -1,5 +1,7 @@
 # MECE Decomposition Guide
 
+> **Note**: This content is now fully integrated into SKILL.md (v2.0+). This file is kept as a standalone reference.
+
 MECE = Mutually Exclusive, Collectively Exhaustive. Break down a problem into non-overlapping components that together cover everything.
 
 ## How to Build a MECE Tree

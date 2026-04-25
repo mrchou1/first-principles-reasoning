@@ -1,5 +1,7 @@
 # Morphological Matrix for Radical Recombination
 
+> **Note**: This template is now fully integrated into SKILL.md (v2.0+). This file is kept as a standalone reference.
+
 This tool helps you generate novel concepts by listing alternative implementations for each fundamental element, then combining them in unexpected ways.
 
 ## Template
