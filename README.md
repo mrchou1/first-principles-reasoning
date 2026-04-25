@@ -1,3 +1,5 @@
+[中文](https://github.com/mrchou1/first-principles-reasoning/blob/main/README.zh.md)
+
 # First Principles Reasoning Skill
 
 A structured reasoning skill for [Claude Code](https://claude.ai/code) that guides deep first-principles analysis through an interactive, multi-phase protocol.
